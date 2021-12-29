@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Bootsxam</PackageId>
+    <Version>0.0.0.2</Version>
+    <Authors>Deskmov</Authors>
+    <Product>Bootsxam</Product>
+    <Company>Deskmov</Company>
+    <PackageIcon>logo.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Pictures\post\logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Alert\AlertPrimary.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Buttons\ButtonPrimary.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Form\FormEntry.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Buttons\ButtonPrimary.xaml.cs">
+      <DependentUpon>ButtonPrimary.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Form\FormDate.xaml.cs">
+      <DependentUpon>FormDate.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Form\FormTime.xaml.cs">
+      <DependentUpon>FormTime.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Form\FormPicker.xaml.cs">
+      <DependentUpon>FormPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Form\FormEditor.xaml.cs">
+      <DependentUpon>FormEditor.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Badge\" />
+    <Folder Include="Card\" />
+  </ItemGroup>
+
+</Project>
